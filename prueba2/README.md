@@ -18,3 +18,7 @@ frontend
 
 investigue sobre react.js en docker y llegue al post https://medium.com/@marvels0098/how-to-include-reactjs-app-in-docker-container-2e73068ce2d5
 sorprendentemente el docker build funciono a la primera
+
+https://docs.docker.com/samples/django/
+
+funcino pero con error django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.

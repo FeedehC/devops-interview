@@ -1,0 +1,27 @@
+version: "3.7"
+   
+services:
+  backend:
+    container_name: p2b
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - webapp-net
+
+  frontend:
+    container_name: p2f
+    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - webapp-net
+
+networks:
+  webapp-net:
