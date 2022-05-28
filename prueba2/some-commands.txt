@@ -1,5 +1,11 @@
+#!/bin/bash
 mkdir django
 sudo apt install python python3 pip -y
 python3 -m pip install --upgrade pip
 pip install django
 sudo apt install docker docker.io
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+#para eliminar todas las imagenes de docker
+sudo docker image rm -f $(sudo docker images -q)

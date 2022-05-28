@@ -1,24 +1,27 @@
-Prueba 2
+# Prueba 2
 
-segui el capitulo 1 del curso devops craftech
+Se siguio el capitulo 1 del Curso Devops Craftech
 
-use alpine porque recomendaba que era mas liviano y me tope con apt no funcionaba asi que investigue sobre apk
+## Backend
+Se investigó para dar con la posibilidad de usar python 3.7, la cual es una version mas vieja pero despues de haber probado con otras imagenes base como ubuntu, alpine y python latest se optó por usar python3.7 ya que no tiene demasiados problemas con los requerimientos solicitados.
 
-al instalar los requerimientos falló en "ipdb" (setup.py error)
+Luego se tuvo fallo en pygraphviz por lo tanto se agregó a la lista de instalación en el Dockerfile
 
-investigando encontre la posibilidad de usar python 3.7 version mas vieja y al fin funciono
+## Frontend 
 
-fallo en pygraphviz
+Se indagó sobre react.js en docker y llegue al post [React.js in Docker](https://medium.com/@marvels0098/how-to-include-reactjs-app-in-docker-container-2e73068ce2d5). Sorprendentemente el docker build funciono a la primera, pero con el error **django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.** Parece que faltaba una secret key, que se puede encontrar en **/backend/backend/.env**.
 
-https://hub.docker.com/_/python
+## Instalación
+Se debe clonar el repositorio, abrir una terminal en la carpeta clonada y ejecutar el siguiente comando:
+- **sudo docker-compose up --build**
 
-https://stackoverflow.com/questions/59626068/running-pip-install-requirements-txt-fails-in-docker-build
+Para visualizar la aplicación, abrir un navegador y acceder a la dirección:
+- **http://localhost:3000**
 
-frontend 
-
-investigue sobre react.js en docker y llegue al post https://medium.com/@marvels0098/how-to-include-reactjs-app-in-docker-container-2e73068ce2d5
-sorprendentemente el docker build funciono a la primera
-
-https://docs.docker.com/samples/django/
-
-funcino pero con error django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+Referencias
+[Docker Django](https://docs.docker.com/samples/django/)
+[Docker Hub Python](https://hub.docker.com/_/python)
+[Docker Hub Node](https://hub.docker.com/_/node)
+[Python Requirements](https://stackoverflow.com/questions/59626068/running-pip-install-requirements-txt-fails-in-docker-build)
+[Django Env](https://alicecampkin.medium.com/how-to-set-up-environment-variables-in-django-f3c4db78c55f)
+[React.js in Docker](https://medium.com/@marvels0098/how-to-include-reactjs-app-in-docker-container-2e73068ce2d5)
