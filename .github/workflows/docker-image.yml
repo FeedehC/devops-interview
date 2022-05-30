@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file ./prueba3/Dockerfile --tag nginx-ci:$(date +%s)
+      run: cd prueba3 && docker build . --file Dockerfile --tag nginx-ci:$(date +%s)
