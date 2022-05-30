@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     #branches: [ master ]
-    path:
+    paths:
       - 'prueba3/index.html'
   #pull_request:
     #branches: [ master ]
