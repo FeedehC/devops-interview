@@ -18,10 +18,11 @@ Se debe clonar el repositorio, abrir una terminal en la carpeta clonada y ejecut
 Para visualizar la aplicación, abrir un navegador y acceder a la dirección:
 - **http://localhost:3000**
 
-Referencias
-[Docker Django](https://docs.docker.com/samples/django/)
-[Docker Hub Python](https://hub.docker.com/_/python)
-[Docker Hub Node](https://hub.docker.com/_/node)
-[Python Requirements](https://stackoverflow.com/questions/59626068/running-pip-install-requirements-txt-fails-in-docker-build)
-[Django Env](https://alicecampkin.medium.com/how-to-set-up-environment-variables-in-django-f3c4db78c55f)
-[React.js in Docker](https://medium.com/@marvels0098/how-to-include-reactjs-app-in-docker-container-2e73068ce2d5)
+## Referencias
+
+- [Docker Django](https://docs.docker.com/samples/django/)
+- [Docker Hub Python](https://hub.docker.com/_/python)
+- [Docker Hub Node](https://hub.docker.com/_/node)
+- [Python Requirements](https://stackoverflow.com/questions/59626068/running-pip-install-requirements-txt-fails-in-docker-build)
+- [Django Env](https://alicecampkin.medium.com/how-to-set-up-environment-variables-in-django-f3c4db78c55f)
+- [React.js in Docker](https://medium.com/@marvels0098/how-to-include-reactjs-app-in-docker-container-2e73068ce2d5)
