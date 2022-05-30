@@ -2,9 +2,11 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    #branches: [ master ]
+    path:
+      - 'prueba3/index.html'
+  #pull_request:
+    #branches: [ master ]
 
 jobs:
 
@@ -39,4 +41,4 @@ jobs:
         with:
           context: "{{defaultContext}}:prueba3"
           push: true
-          tags: feedehc/nginx-ci:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nginx-ci:latest
