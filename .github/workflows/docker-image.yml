@@ -12,14 +12,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: cd prueba3 && docker build . --file Dockerfile --tag nginx-ci:$(date +%s)
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: Build the Docker image
+#      run: cd prueba3 && docker build . --file Dockerfile --tag nginx-ci:$(date +%s)
 
     - uses: mr-smithers-excellent/docker-build-push@v5    
       with:
         image: feedehc/nginx-ci
+        directory: prueba3
         registry: docker.io
+        tag: v1
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
