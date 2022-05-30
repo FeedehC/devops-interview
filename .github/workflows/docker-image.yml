@@ -20,6 +20,7 @@ jobs:
       with:
         image: feedehc/nginx-ci
         directory: prueba3
+        dockerfile: prueba3/Dockerfile
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
