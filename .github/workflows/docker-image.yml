@@ -42,3 +42,7 @@ jobs:
           context: "{{defaultContext}}:prueba3"
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nginx-ci:latest
+      -
+        name: Test Container
+        run: |
+          curl localhost:8080
