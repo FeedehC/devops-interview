@@ -17,8 +17,8 @@ jobs:
     - name: Build the Docker image
       run: cd prueba3 && docker build . --file Dockerfile --tag nginx-ci:$(date +%s)
 
-      uses: mr-smithers-excellent/docker-build-push@v5
-      name: Docker Build Push (mr-smith)
+    - uses: mr-smithers-excellent/docker-build-push@v5
+    - name: Docker Build Push (mr-smith)
       with:
         image: feedehc/nginx-ci
         registry: docker.io
