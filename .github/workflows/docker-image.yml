@@ -39,4 +39,4 @@ jobs:
         with:
           context: "{{defaultContext}}:prueba3"
           push: true
-          tags: user/app:latest
+          tags: feedehc/nginx-ci:latest
