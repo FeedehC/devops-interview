@@ -1,0 +1,2 @@
+sudo docker build . -t webserver
+sudo docker run -it --rm -p 8080:80 webserver
