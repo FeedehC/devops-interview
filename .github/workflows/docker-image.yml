@@ -5,8 +5,10 @@ on:
     branches: [ master ]
     paths:
       - 'prueba3/index.html'
-  #pull_request:
-    #branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'prueba3/index.html'
 
 jobs:
 
@@ -18,14 +20,6 @@ jobs:
 #    - uses: actions/checkout@v3
 #    - name: Build the Docker image
 #      run: cd prueba3 && docker build . --file Dockerfile --tag nginx-ci:$(date +%s)
-#    - uses: mr-smithers-excellent/docker-build-push@v5    
-#      with:
-#        image: feedehc/nginx-ci
-#        directory: prueba3
-#        dockerfile: ./prueba3/Dockerfile
-#        registry: docker.io
-#        username: ${{ secrets.DOCKER_USERNAME }}
-#        password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -42,7 +36,7 @@ jobs:
           context: "{{defaultContext}}:prueba3"
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nginx-ci:latest
-      -
-        name: Test Container
-        run: |
-          curl localhost:8080
+#      -
+#        name: Test Container
+#        run: |
+#          curl localhost:8080
